@@ -1,7 +1,29 @@
 <html>
 <head>
+  <title>Zuplo callback helper</title>
 </head>
 <body>
-Here
+  <h1>
+  Callback helper
+  </h1>
+  <a href="https://zuplo.com">Zuplo</a> does not process or store this data, this is just a simple HTML helper to extract query string information.
+  <h2>
+  Query String Values
+  </h2>
+  <div id="output">
+   
+  </div>
+  <script>
+    const output = document.getElementById('output');
+    const urlParams = new URLSearchParams(location.search);
+    
+    for (const [key, value] of urlParams) {
+        const elm = document.createElement('div');
+        const txt = document.createTextNode(`${key}: ${value}`);
+        elm.appendChild(txt);
+        output.appendChild(elm);
+    }
+  </script>
 </body>
+
 </html>
