@@ -18,7 +18,7 @@
     const urlParams = new URLSearchParams(location.search);
     
     for (const [key, value] of urlParams) {
-        const elm = document.createElement('div');
+        const elm = document.createElement('pre');
         const txt = document.createTextNode(`${key}: ${value}`);
         elm.appendChild(txt);
         output.appendChild(elm);
